@@ -1,0 +1,13 @@
+class Uber
+{
+  cal(km,bf=12)
+  {
+    this.bf=bf;
+    this.km=km;
+    var charge = bf * km;
+    return charge;
+  }
+}
+
+var s1 = new Uber();
+console.log("The cost of your 5km ride is : "+s1.cal(5));

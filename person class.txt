@@ -1,0 +1,20 @@
+class Person
+{
+  constructor(fname,lname,dob,gender,address)
+  {
+    this.fname = fname;
+    this.lname = lname;
+    this.dob = dob;
+    this.gender = gender;
+    this.address = address;
+  }
+}
+
+var p1 = new Person("Gayathri","G","20.06.1994","Female","Trichy");
+//console.log(Object.values(p1));
+
+let {fname:f,lname:l,dob:d,gender:g,address:a} = p1
+console.log(`Person Name : ${f} ${l}
+Date of Birth : ${d}
+Gender : ${g}
+Address : ${a}`);

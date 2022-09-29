@@ -1,0 +1,54 @@
+class Circle
+{
+  constructor(rad,clr)
+  {
+    this.rad = rad;
+    this.clr = clr;
+    this.pi = 3.1417;
+  }
+  get getRadius()
+  {
+    return this.rad;
+  }
+  set setRadius(rad)
+  {
+    return this.rad=rad;
+  }
+   get getColor()
+  {
+    return this.clr;
+  }
+  set setColor(clr)
+  {
+    return this.clr=clr;
+  }
+  getArea()
+  {
+    return this.pi*this.rad*this.rad;
+  }
+  getcircumference()
+  {
+    return 2*this.pi*this.rad;
+  }
+}
+
+var c1 = new Circle(1.0,"red");
+console.log(`Radius with getter method : ${c1.getRadius}`);
+c1.setRadius = 2.5;
+console.log(`Radius after setter method : ${c1.getRadius}`);
+
+console.log(`Color with getter method : ${c1.getColor}`);
+c1.setColor = "Yellow";
+console.log(`Color after setter method : ${c1.getColor}`);
+
+ Circle.prototype.toString = function con()
+  {
+  return `Circle [radius =${this.rad}, color=${this.clr}]`;
+  }
+
+
+console.log(c1.toString());
+var area = c1.getArea();
+var cir = c1.getcircumference();
+console.log("Area of the Circle " +area.toFixed(2));
+console.log("Circumference of the circle " +cir);
